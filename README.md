@@ -1,5 +1,7 @@
 # fetch-latest-release
 
+This repo is a forked version of this github action. Returns empty values when no release available.
+
 ![Latest Release](https://img.shields.io/github/v/release/thebritican/fetch-latest-release?label=Latest%20Release)
 
 A tiny GitHub action to fetch the latest GitHub release for a given repository
