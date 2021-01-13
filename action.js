@@ -33,31 +33,53 @@ async function run() {
       repo,
     })
   } catch (error) {
-    core.info('Could not fetch the latest release. Have you made one yet?')
-    core.setFailed(error)
+    core.info('Could not fetch the latest release, empty values returned.')
   }
 
-  const { data } = latestRelease
+  const { data } = latestRelease || {
+    data: {
+      'url': '',
+      'assets_url': '',
+      'upload_url': '',
+      'html_url': '',
+      'id': '',
+      'node_id': '',
+      'tag_name': '',
+      'target_commitish': '',
+      'name': '',
+      'body': '',
+      'draft': '',
+      'prerelease': '',
+      'author_id': '',
+      'author_node_id': '',
+      'author_url': '',
+      'author_login': '',
+      'author_html_url': '',
+      'author_type': '',
+      'author_site_admin': '',
+    }
+  }
+}
 
-  core.setOutput('url', data.url)
-  core.setOutput('assets_url', data.assets_url)
-  core.setOutput('upload_url', data.upload_url)
-  core.setOutput('html_url', data.html_url)
-  core.setOutput('id', data.id.toString())
-  core.setOutput('node_id', data.node_id)
-  core.setOutput('tag_name', data.tag_name)
-  core.setOutput('target_commitish', data.target_commitish)
-  core.setOutput('name', data.name)
-  core.setOutput('body', data.body)
-  core.setOutput('draft', data.draft)
-  core.setOutput('prerelease', data.prerelease)
-  core.setOutput('author_id', data.author.id.toString())
-  core.setOutput('author_node_id', data.author.node_id)
-  core.setOutput('author_url', data.author.url)
-  core.setOutput('author_login', data.author.login)
-  core.setOutput('author_html_url', data.author.html_url)
-  core.setOutput('author_type', data.author.type)
-  core.setOutput('author_site_admin', data.author.site_admin)
+core.setOutput('url', data.url)
+core.setOutput('assets_url', data.assets_url)
+core.setOutput('upload_url', data.upload_url)
+core.setOutput('html_url', data.html_url)
+core.setOutput('id', data.id.toString())
+core.setOutput('node_id', data.node_id)
+core.setOutput('tag_name', data.tag_name)
+core.setOutput('target_commitish', data.target_commitish)
+core.setOutput('name', data.name)
+core.setOutput('body', data.body)
+core.setOutput('draft', data.draft)
+core.setOutput('prerelease', data.prerelease)
+core.setOutput('author_id', data.author.id.toString())
+core.setOutput('author_node_id', data.author.node_id)
+core.setOutput('author_url', data.author.url)
+core.setOutput('author_login', data.author.login)
+core.setOutput('author_html_url', data.author.html_url)
+core.setOutput('author_type', data.author.type)
+core.setOutput('author_site_admin', data.author.site_admin)
 }
 
 try {
