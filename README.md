@@ -1,6 +1,13 @@
-# fetch-latest-release
+# About this repo
 
-This repo is a forked version of this github action. Returns empty values when no release available.
+* 管理：@latica-jp = yoshikoshi
+* https://github.com/gregziegan/fetch-latest-release を一部改変
+  * リリースが存在しない場合にエラーにせず空白で返すようにした
+* kintoneプラグインのリポジトリ（Manyrepo）のGithub Actionから利用
+  * Monorepo統合が完了したら不要になる予定
+* forkだとprivateにできないため、コピーした
+
+# fetch-latest-release
 
 ![Latest Release](https://img.shields.io/github/v/release/thebritican/fetch-latest-release?label=Latest%20Release)
 
