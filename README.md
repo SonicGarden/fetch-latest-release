@@ -1,6 +1,6 @@
 # About this repo
 
-* 管理：@latica-jp = yoshikoshi
+* 管理：@latica-jp
 * https://github.com/gregziegan/fetch-latest-release を一部改変
   * リリースが存在しない場合にエラーにせず空白で返すようにした
 * kintoneプラグインのリポジトリ（Manyrepo）のGithub Actionから利用
