@@ -5,7 +5,6 @@
   * リリースが存在しない場合にエラーにせず空白で返すようにした
 * kintoneプラグインのリポジトリ（Manyrepo）のGithub Actionから利用
   * Monorepo統合が完了したら不要になる予定
-* forkだとprivateにできないため、コピーした
 
 # fetch-latest-release
 
